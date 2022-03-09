@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_lmi.mk
+    $(LOCAL_DIR)/yaap_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    awaken_lmi-userdebug
+    yaap_lmi-userdebug
