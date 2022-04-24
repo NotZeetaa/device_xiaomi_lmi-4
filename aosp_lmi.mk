@@ -8,18 +8,22 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Awaken stuff
-$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
+# Inherit some common PixelPlusUi stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from lmi device
 $(call inherit-product, device/xiaomi/lmi/device.mk)
 
-PRODUCT_NAME := awaken_lmi
+# PixelPlusUI Maintainer Flags
+PPUI_MAINTAINER := NotZeetaa
+
+PRODUCT_NAME := aosp_lmi
 PRODUCT_DEVICE := lmi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO F2 Pro
-USE_GAPPS := true
+WITH_GAPPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
 
