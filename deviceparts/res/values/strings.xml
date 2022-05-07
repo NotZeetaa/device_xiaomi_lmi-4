@@ -52,5 +52,9 @@
     <string name="popup_led_color_red">Red</string>
     <string name="popup_led_color_yellow">Yellow</string>
     <string name="popup_led_color_white">White</string>
+    
+    <!-- High Touch Polling Rate Support strings -->
+    <string name="htsr_enable_title">Increase Touch Responsiveness</string>
+    <string name="htsr_enable_summary">Increases touch polling rate to decrease latency</string>
 
 </resources>
