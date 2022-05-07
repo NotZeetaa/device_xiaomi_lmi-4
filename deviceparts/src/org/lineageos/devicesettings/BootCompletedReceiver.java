@@ -24,16 +24,25 @@ import android.util.Log;
 
 import org.lineageos.devicesettings.popupcamera.PopupCameraUtils;
 import org.lineageos.devicesettings.touchsampling.TouchSamplingUtils;
+import org.lineageos.devicesettings.utils.FileUtils;
+import android.content.SharedPreferences;
+import androidx.preference.PreferenceManager;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "DeviceParts";
+    private static final String HBM_ENABLE_KEY = "hbm_mode";
+    private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         PopupCameraUtils.startService(context);
         TouchSamplingUtils.restoreSamplingValue(context);
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        boolean hbmEnabled = sharedPrefs.getBoolean(HBM_ENABLE_KEY, false);
+        FileUtils.writeLine(HBM_NODE, hbmEnabled ? "1" : "0");
     }
 }
