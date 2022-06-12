@@ -1099,4 +1099,6 @@
         <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
     </string-array>
 
+    <!-- Scfeen Off UDFPS -->
+    <bool name="config_supportScreenOffUdfps">true</bool>
 </resources>
