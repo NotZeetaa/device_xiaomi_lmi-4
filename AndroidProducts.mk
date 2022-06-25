@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/titan_lmi.mk
+    $(LOCAL_DIR)/aosp_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    titan_lmi-userdebug
+    aosp_lmi-userdebug
