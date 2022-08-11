@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_lmi.mk
+    $(LOCAL_DIR)/fluid_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_lmi-userdebug
+    fluid_lmi-userdebug
